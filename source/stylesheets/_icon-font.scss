@@ -1,17 +1,31 @@
 @font-face {
-  font-family: 'slate';
-  src:font-url('slate.eot?-syv14m');
-  src:font-url('slate.eot?#iefix-syv14m') format('embedded-opentype'),
-    font-url('slate.woff2?-syv14m') format('woff2'),
-    font-url('slate.woff?-syv14m') format('woff'),
-    font-url('slate.ttf?-syv14m') format('truetype'),
-    font-url('slate.svg?-syv14m#slate') format('svg');
+  font-family: "slate";
+  src: font-url("slate.eot?-syv14m");
+  src: font-url("slate.eot?#iefix-syv14m") format("embedded-opentype"),
+    font-url("slate.woff2?-syv14m") format("woff2"),
+    font-url("slate.woff?-syv14m") format("woff"),
+    font-url("slate.ttf?-syv14m") format("truetype"),
+    font-url("slate.svg?-syv14m#slate") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
+@import "./../fonts/fontawesome/scss/fontawesome.scss";
+@import "./../fonts/fontawesome/scss/solid.scss";
+@import "./../fonts/fontawesome/scss/brands.scss";
+
+%icon-fa-regular {
+  font-family: "fa-regular";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
 %icon {
-  font-family: 'slate';
+  font-family: "slate";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -35,4 +49,28 @@
 %icon-search {
   @extend %icon;
   content: "\e607";
+}
+%icon-quote-left {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-quote-left);
+  }
+}
+%icon-caret-square-right {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-caret-square-right);
+  }
+}
+%icon-chevron-circle-right {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-chevron-circle-right);
+  }
 }
